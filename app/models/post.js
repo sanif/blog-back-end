@@ -6,13 +6,14 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 /**
- * User schema
+ * Post schema
  */
 
-const UserSchema = new Schema({
+const PostSchema = new Schema({
+  userId: { type: Number, default: "" },
   id: { type: Number, default: "" },
-  name: { type: String, default: "" },
-  email: { type: String, default: "" }
+  title: { type: String, default: "" },
+  body: { type: String, default: "" }
 });
 
 /**
@@ -26,16 +27,16 @@ const UserSchema = new Schema({
  * Methods
  */
 
-UserSchema.method({});
+PostSchema.method({});
 
 /**
  * Statics
  */
 
-UserSchema.static({});
+PostSchema.static({});
 
 /**
  * Register
  */
 
-mongoose.model("User", UserSchema);
+mongoose.model("Post", PostSchema);

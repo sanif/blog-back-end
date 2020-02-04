@@ -1,10 +1,9 @@
 extends ../layouts/default.pug
 
 block page-header
-  h2 Todo
+  h2 Blogs
 
 block content
-  ol
-    li Awesome! Now add some routes, models, views and controllers.
-    li Change the content of&#32;
-      code app/views/home/index.pug
+  .btn-group
+    a.btn.btn-primary(href="/posts") View Posts
+    a.btn.btn-primary(href="/posts/sync") Sync DB

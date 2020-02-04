@@ -1,9 +1,9 @@
 {
-  "name": "node-express-mongoose",
-  "description": "A boilerplate application for node, mongo",
+  "name": "blog-back-end",
+  "description": "A simple blog",
   "version": "1.0.0",
   "author": {
-    "name": "Madhusudhan Srinivasa",
+    "name": "Sanif SS",
     "email": "me@madhums.me"
   },
   "engines": {
@@ -16,7 +16,8 @@
     "prod": "pm2-runtime start ecosystem.config.js --env production"
   },
   "dependencies": {
-    "body-parser": "~1.19.0",
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
     "co": "~4.6.0",
     "compression": "~1.7.4",
     "connect-flash": "~0.1.1",

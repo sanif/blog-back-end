@@ -1,0 +1,26 @@
+extends ../layouts/default.pug
+
+block page-header
+  h2 Posts
+
+block content
+
+    if(posts.length==0)
+        p.alert Empty. Please sync first
+        a.btn.btn-primary(href="/posts/sync") Sync
+    else
+        table.table
+            thead
+                tr
+                    th User Id
+                    th User Name
+                    th Title
+                    th Body
+            tbody
+                each val in posts
+                    tr
+                        td=val.user.id
+                        td=val.user.name
+                        td=val._doc.title
+                        td=val._doc.body
+
